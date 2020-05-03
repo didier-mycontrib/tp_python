@@ -23,3 +23,11 @@ a=float(input('a:')) # exemple a: 2 et a vu comme 2.0
 b=float(input('b:')) # exemple b: 3 et b vu comme 3.0
 c=a+b # 2.0 + 3.0 = 5.0 = 5
 print('c=a+b=',c) # affiche par exemple c=a+b= 5
+
+x=2; y=3; z=x*y; print("z=x*y=",z) #  ; est un séparateur d'instructions
+'''
+commentaire
+sur plusieurs
+lignes
+'''
+print('suite')

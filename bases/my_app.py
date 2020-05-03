@@ -1,14 +1,17 @@
 # importation de toutes les fonctions du fichier my_fct.py
 # pour pouvoir les appeler depuis ce fichier my_app.py
-from my_fct import *
+#from my_fct import *
+# --> appel direct de doubleDe(x) et moitieDe(x)
+import my_fct
+# --> appels de my_fct.doubleDe(x) et my_fct.moitieDe(x)
 
 #from my_util.op3 import *
 from my_util.op3 import tripleDe
 from my_util.op4 import *
 
 x=12;
-print(doubleDe(x)) # affiche 24
-print(moitieDe(x)) # affiche 6
+print(my_fct.doubleDe(x)) # affiche 24
+print(my_fct.moitieDe(x)) # affiche 6
 
 print(tripleDe(x)) # affiche 36
 print(quartDe(x)) # affiche 3.0
