@@ -10,5 +10,8 @@ REM python listes.py
 REM python ensembles.py
 REM python dictionnaires.py
 REM python dates.py
-python strings.py
+REM python strings.py
+REM python exceptions.py
+REM python fichiers.py
+python objets.py
 pause
