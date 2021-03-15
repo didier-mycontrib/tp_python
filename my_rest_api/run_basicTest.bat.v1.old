@@ -1,0 +1,4 @@
+cd /d %~dp0
+pipenv run python basicTest.py 
+REM with old unittest
+pause

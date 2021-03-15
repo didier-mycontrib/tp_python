@@ -1,0 +1,18 @@
+from my_rest_api.devise import Devise
+import unittest
+
+class BasicTest(unittest.TestCase):
+	def test_devise_type(self):
+		d1 = Devise('EUR','Euro',1) 
+		print(">>d1=",d1)
+		print(">>type(d1)=",type(d1))
+		self.assertEqual(d1.code,"EUR")
+
+
+'''
+d1 = Devise('EUR','Euro',1) 
+print("d1=",d1)
+print("type(d1)=",type(d1))
+'''
+
+unittest.main()
