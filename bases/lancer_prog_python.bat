@@ -13,6 +13,6 @@ REM python dates.py
 REM python strings.py
 REM python exceptions.py
 REM python fichiers.py
-python objets.py
-REM python objets2.py
+REM python objets.py
+python objets2.py
 pause

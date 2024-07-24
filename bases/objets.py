@@ -52,6 +52,18 @@ class Rectangle():
         self.y=self.y+dy         
 
 
+#### Compte en python:
+class Compte():
+    def __init__(self,numero=0,solde=0):
+        self.__numero=numero
+        self.__solde=solde
+        
+### utilisation de compte
+
+c1 = Compte(1,250.0)
+c1.__solde=350.0;
+print("c1=" , vars(c1))        
+        
 ###### utilisation de la classe Cercle		
 		
 		
