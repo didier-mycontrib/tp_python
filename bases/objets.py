@@ -6,7 +6,7 @@ class Cercle():
 
     #constructeur avec valeurs par défaut:
 	def __init__(self,xc=0,yc=0,rayon=0):
-		self.xc=xc
+        self.xc=xc
 		self.yc=yc
 		self.rayon=rayon
 	
