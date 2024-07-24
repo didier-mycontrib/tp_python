@@ -53,7 +53,9 @@ class Rectangle():
 
 
 #### Compte en python:
-class Compte():
+# ._attribut_protected , .__attribut_prive
+class Compte:
+    decouvertAutorise=-200.0;
     def __init__(self,numero=0,solde=0):
         self.__numero=numero
         self.__solde=solde
@@ -61,8 +63,12 @@ class Compte():
 ### utilisation de compte
 
 c1 = Compte(1,250.0)
-c1.__solde=350.0;
-print("c1=" , vars(c1))        
+c1.__newAttribute="newValue";
+#print("c1.__solde=" , c1.__solde) #interdit car .__solde est privé
+print("c1 as dict =" , vars(c1)) 
+print("Compte.decouvertAutorise=" , Compte.decouvertAutorise) 
+Compte.decouvertAutorise=-300.0
+print("Compte.decouvertAutorise=" , Compte.decouvertAutorise)       
         
 ###### utilisation de la classe Cercle		
 		

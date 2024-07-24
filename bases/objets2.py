@@ -1,8 +1,8 @@
-import math
+from abc import ABC, abstractmethod
 
 ########### code de la classe AnimalDomestique en python :
-
-class AnimalDomestique():
+#NB: ABC signifie AbstractBaseClass
+class AnimalDomestique(ABC):
 
     #constructeur avec valeurs par défaut:
     def __init__(self,nom=""):
@@ -14,10 +14,11 @@ class AnimalDomestique():
         return "AnimalDomestique(nom="+self.nom + ")"
 		
     def decrire(self):
-        print("AnimalDomestique de nom=",self.nom)
-		
+         print("AnimalDomestique de nom=",self.nom)
+
+    @abstractmethod
     def parler(self):
-        print("animal_parlant")
+        pass
 
 #### classe Chat héritant de AnimalDomestique:
 
@@ -38,7 +39,7 @@ class Chat(AnimalDomestique):
         print("Je suis un chat qui dort ",self.nbHeuresSommeil, " h")
         super().decrire()
         #AnimalDomestique.decrire(self)
-		
+    	
     def parler(self):
         print("miaou miaou")
         
@@ -76,12 +77,14 @@ class Chien(AnimalDomestique):
 ###### et de ses sous classes		
 		
 		
-a=AnimalDomestique() #instanciation (pas de mot clef new) mais nom de classe
-                     #vue comme fonction créant une nouvelle instance
+'''
+#partie impossible depuis que la classe AnimalDomestique est abstraite
+a=AnimalDomestique() #impossible d'instancier une classe abstraite
 a.nom="animal_domestique_inconnu"
 a.decrire()
 a.parler()
 print("a_as_dict:" , vars(a))
+'''
 
 chat1 = Chat( 15 , "malo")
 print(chat1)
