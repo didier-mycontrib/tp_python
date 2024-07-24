@@ -5,21 +5,21 @@ import math
 class Cercle():
 
     #constructeur avec valeurs par défaut:
-	def __init__(self,xc=0,yc=0,rayon=0):
+    def __init__(self,xc=0,yc=0,rayon=0):
         self.xc=xc
-		self.yc=yc
-		self.rayon=rayon
+        self.yc=yc
+        self.rayon=rayon
 	
 	#méthode spéciale __str__ (équivalent à .toString() de java)
 	#qui sera automatiquement appelée lors d'un print(cercle):
-	def __str__(self):
-		return "Cercle(xc="+str(self.xc) + ",yc="+str(self.yc) + ",rayon="+str(self.rayon) + ")"
+    def __str__(self):
+        return "Cercle(xc="+str(self.xc) + ",yc="+str(self.yc) + ",rayon="+str(self.rayon) + ")"
 		
-	def perimetre(self):
-		return 2*math.pi*self.rayon
+    def perimetre(self):
+        return 2*math.pi*self.rayon
 		
-	def aire(self):
-		return math.pi*self.rayon*self.rayon
+    def aire(self):
+        return math.pi*self.rayon*self.rayon
 
 ###### utilisation de la classe Cercle		
 		
