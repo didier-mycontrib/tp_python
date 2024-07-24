@@ -20,6 +20,37 @@ class Cercle():
 		
     def aire(self):
         return math.pi*self.rayon*self.rayon
+        
+    def deplacer(self,dx,dy):
+        self.xc=self.xc+dx
+        self.yc=self.yc+dy         
+
+########### code de la classe Rectangle en python :
+
+class Rectangle():
+
+    #constructeur avec valeurs par défaut:
+    def __init__(self,x=0,y=0,largeur=0,hauteur=0):
+        self.x=x
+        self.y=y
+        self.largeur=largeur
+        self.hauteur=hauteur
+	
+	#méthode spéciale __str__ (équivalent à .toString() de java)
+	#qui sera automatiquement appelée lors d'un print(rectangle):
+    def __str__(self):
+        return "Rectangle(x="+str(self.x) + ",y="+str(self.y) + ",largeur="+str(self.largeur) + ",hauteur="+str(self.hauteur) + ")"
+		
+    def perimetre(self):
+        return 2*(self.largeur + self.hauteur)
+		
+    def aire(self):
+        return self.largeur*self.hauteur
+        
+    def deplacer(self,dx,dy):
+        self.x=self.x+dx
+        self.y=self.y+dy         
+
 
 ###### utilisation de la classe Cercle		
 		
@@ -37,8 +68,19 @@ print("rayon de c2=",c2.rayon) # rayon de c2= 20
 print("c2=" , c2) # équivalent à print("c2=" , str(c2)) 
 # affiche c2= Cercle(xc=40,yc=60,rayon=20)
 
+c2.deplacer(10,30)
+print("apres c2.deplacer(10,30) c2=" , c2)
+
 print("type(c2)=",type(c2)) # <class '__main__.Cercle'>
 #c2AsDict = c2.__dict__ # ok mais moins bien que vars(...)
 c2AsDict = vars(c2) # converti un objet en un dictionnaire
 print("c2AsDict=",c2AsDict) # {'xc': 40, 'yc': 60, 'rayon': 20}
 print("type(c2AsDict)=",type(c2AsDict)) #  <class 'dict'>
+
+r1=Rectangle(15,15,200,150);
+print("largeur de r1=",r1.largeur);
+print("r1=",r1);
+r1.deplacer(10,30)
+print("apres r1.deplacer(10,30) r1=" , r1)
+print("perimetre de r1=",r1.perimetre())
+print("surface de r1=",r1.aire()) 
