@@ -9,10 +9,10 @@ REM python p5_math_random.py
 REM python listes.py
 REM python ensembles.py
 REM python dictionnaires.py
-REM python dates.py
+python dates.py
 REM python strings.py
 REM python exceptions.py
 REM python fichiers.py
 REM python objets.py
-python objets2.py
+REM python objets2.py
 pause
