@@ -31,9 +31,10 @@ with mysql.connector.connect(**connection_params) as db  :
 
     with db.cursor() as c:
         c.execute(selectRequest)
-        resultats = c.fetchall()
-        print("Nombre de lignes sélectionnées/récupérées :", c.rowcount) 
-        for film in resultats:
+        #resultats = c.fetchall()
+        #print("Nombre de lignes sélectionnées/récupérées :", c.rowcount) 
+        #for film in resultats:
+        for film in c :
             #print(film) # film is a tuple (immutable list of field values)
             filmAsDict = {columnNamesTuple[i] : film[i] for i, _ in enumerate(columnNamesTuple)}
             print(filmAsDict)
