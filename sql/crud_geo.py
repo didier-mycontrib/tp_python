@@ -4,9 +4,10 @@ import mysql.connector
 
 connection_params = {
     'host': "localhost",
+    'port' : 3306,
     'user': "root",
     'password': "root",
-    'database': "geoDB",
+    'database': "geoDB"
 }
 
 #se connecter à la base de donnees et utiliser la connexion 
@@ -44,9 +45,9 @@ with mysql.connector.connect(**connection_params) as db  :
         for departement in resultats:
             #print(departement) # department is a tuple (immutable list of field values)
             depAsDict = {columnNamesTuple[i] : departement[i] for i, _ in enumerate(columnNamesTuple)}
-            print(depAsDict)
+            #print(depAsDict)
             depAsJsonString = json.dumps(depAsDict);
-            #print (depAsJsonString)
+            print (depAsJsonString)
             
     #suppression de donnees:
     deleteRequest = """delete from departement
