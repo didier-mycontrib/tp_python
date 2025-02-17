@@ -1,4 +1,5 @@
-from fastapi import APIRouter
+# HTTPException not from http.client but from fastapi
+from fastapi import APIRouter , HTTPException
 
 from devise import Devise, DeviseModel
 from devise_service import DeviseService
@@ -14,20 +15,28 @@ async def get_devise_by_id(id):
 
 @router.post("/" ,status_code=201 )
 async def create_devise(dev : DeviseModel):
-    DeviseService().saveDevise(dev);
-    return dev;
+    try :
+        DeviseService().createDevise(dev);
+        return dev;
+    except Exception as e:
+        raise HTTPException(status_code=409 , detail = str(e))
 
-"""
+
 @router.put("/{id}" )
 async def update_devise(id,dev : DeviseModel):
-    dev.code =id;
-    DeviseService().saveDevise(dev);
-    return dev;
-"""
+    try:
+        dev.code =id;
+        DeviseService().updateDevise(dev);
+        return dev;
+    except Exception as e:
+        raise HTTPException(status_code=404 , detail = str(e))
+
 
 @router.delete("/{id}", status_code=204 )
 async def delete_devise(id):
-    DeviseService().deleteDeviseById(id);
+    deletedDevise = DeviseService().deleteDeviseById(id);
+    if deletedDevise==None :
+        raise HTTPException(status_code=404, detail="no Devise (to Delete) found for key/code="+id)
 
 
 @router.get("/" )
