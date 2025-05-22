@@ -39,7 +39,22 @@ print("indiceBdansListe5",indiceBdansListe5) # 1 (premier trouvé)
 indiceCdansListe5= liste5.index('c')
 print("indiceCdansListe5",indiceCdansListe5) # 4 
 
+autreListe = [ 'a' , 'b' , 'c1', 'd' , 'e']
+autreListe.insert(3,'c2') #insertion avant l'élément actuel d'indice 3
+                          #insertion du nouvel élément en pos 3 et en décalant la fin
+print('autreListe apres insertion:' , autreListe)
+
 #liste5.index('e') --> ValueError: 'e' is not in list
+
+liste = [ 'a' , 'b', 'c' ]
+
+#boucle sur indices:
+for i in range(len(liste)) :
+	print('i=',i,'liste[i]=',liste[i])
+# i= 0 liste[i]= a
+# i= 1 liste[i]= b
+# i= 2 liste[i]= c
+
 
 liste = [ 'a' , 'b', 'c' ]
 
@@ -80,6 +95,7 @@ print("listeCouleurs=",listeCouleurs) # ['rouge', 'vert', 'bleu']
 mesCouleurs=";".join(listeCouleurs) # transforme liste en chaîne de caractères
 print("mesCouleurs=",mesCouleurs) # affiche la chaîne rouge;vert;bleu
 
+
 liste10=[ 'a' , 'b' , 'c' ]
 if 'a' in liste10 :
 	print('liste10 comporte a')
@@ -92,4 +108,16 @@ else :
 	print('liste10 ne comporte pas d')	
 
 
+'''
+listeDeCouleurs =           [ 'rouge' , 'vert' , 'bleu' , 'noir' , 'blanc' ]
+# indices ou positions :      0            1        2        3        4
+print('la taille de liste de couleurs est ' , len(listeDeCouleurs) ) # affiche 5
+print('la première couleur est ' , listeDeCouleurs[0] ) # affiche rouge
+print('la couleurs du milieu est ' , listeDeCouleurs[2] ) # affiche bleu
+print('la dernière couleur est ' , listeDeCouleurs[4] ) # affiche blanc
+print('en dernier ' , listeDeCouleurs[ len(listeDeCouleurs)-1 ] ) #  blanc
 
+print('plage 1 inclus à 3 exclus :' , listeDeCouleurs[1:3]) # ['vert', 'bleu']
+print('plage début à 3 exclus :',listeDeCouleurs[:3]) # ['rouge', 'vert', 'bleu']
+print('plage 2 inclus à fin  :',listeDeCouleurs[2:]) # ['bleu', 'noir', 'blanc']
+'''

@@ -82,3 +82,15 @@ s14="123"
 if s14.isdigit() :
 	print("s14 ne comporte que des caractères numériques ")
 	
+##### f-string depuis python 3.6
+
+nom="toto"
+age=30
+taille=1.80
+
+message = f'{nom} a {age} ans et mesure {taille} m'
+print("message=",message) # toto a 30 ans et mesure 1.8 m
+
+pers = { 'nom' : 'titi' , 'age' : 40 , 'taille': 1.66}
+message = f'{pers["nom"]} a {pers["age"]} ans et mesure {pers["taille"]} m'
+print("message=",message) # titi a 40 ans et mesure 1.66 m

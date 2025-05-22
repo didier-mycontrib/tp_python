@@ -86,3 +86,98 @@ print('somme=',somme) # affiche 150
 print('moyenne=',moyenne) # affiche 30
 	
 
+"""
+L'instruction if ne peut pas etre vide . si pour une raison quelconque
+on souhaite y placer une instruction sans contenu , on peut utiliser l'instruction pass
+pour éviter une erreur
+"""
+x1=5; x2=6
+if x2 > x1 :
+	pass # ne rien faire pour l'instant (version 1 temporaire)
+print("suite apres if ne faisant rien pour l'instant")
+
+age=33
+etat="majeur" if age >=18 else "mineur"
+# équivalent en c,c++,java,javascript: etat=(age>=18)?"majeur":"mineur"
+print("etat=",etat , "pour age" , age) # etat= majeur pour age 33
+
+age=15
+etat="majeur" if age >=18 else "mineur"
+print("etat=",etat, "pour age" , age) # etat= mineur pour age 15
+
+x=25
+if x >= 20:
+	print("x >= 20")
+	if x >= 30 :
+		print("et aussi x >=30")
+	else:
+		print("et x < 30 (pas >= 30)")
+
+heure=15
+
+if heure<=12:
+    print("bonjour!")
+elif heure <=18 :
+    print("bon après midi!")
+else:
+    print('bonsoir!')		
+
+matrice = [
+	[ 4 , 0 , 5] ,
+	[ 2 , 6 , 1] ,
+	[ 0 , 3 , 0]
+]	
+
+for i in range(3) :
+	for j in range(3):
+		print("matrice("+str(i)+","+str(j)+")=" , matrice[i][j])
+
+s="abc"
+for c in s:
+	print("c=",c)
+
+languages=["python" , "javascript"];
+for l in languages:
+	print("l=",l)
+else:
+	print("--- fin de liste ----")
+
+valeurs=[-1, -8, 6 , -9 , 12,-3, 4]
+premierPositif=None ; print("type de None=",type(premierPositif))
+for v in valeurs:
+	if v >=0 :
+		premierPositif=v
+		break # fin anticipée de boucle (premierPositif déjà trouvé)
+print("premierPositif=",premierPositif) # 6
+
+for v in valeurs:
+	if v <0 :
+		continue # passer directement à l'itération suivante
+	print("positive v=",v) #instruction declenchée que si pas continue avant
+
+age=33
+#message = "mon age est " + age #TypeError: can only concatenate str (not "int") to str
+message = "mon age est " + str(age)
+print("message=",message)
+
+couleur = "vert"
+if couleur == "rouge" :
+	print("red")
+elif couleur=="vert" :
+	print("green")
+elif couleur=="bleu" :
+	print("blue")
+else:
+	print("other color")
+
+couleur = "bleu"
+match couleur:
+	case "rouge" :
+		print("red")
+	case "vert" :
+		print("green")
+	case "bleu" :
+		print("blue")
+	case _ :
+		print("other color / default")	
+		

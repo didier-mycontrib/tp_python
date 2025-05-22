@@ -44,3 +44,17 @@ print(set6) # {'d', 'c'}
 
 #il existe également .isdisjoint() , .issubset() , .difference() , ...
 
+# transformations de set en liste , tuple et vice versa
+set1 = {"a", "b" , "c"  }
+listeFromSet1 = list(set1)
+print("listeFromSet1",listeFromSet1,type(listeFromSet1))
+
+
+
+tuple1 = ("a", "doublon", "b" , "c" , "doublon")
+setFromTuple1 = set(tuple1)
+print("setFromTuple1 =", setFromTuple1 ,type(setFromTuple1))
+
+tuple2 = ("a", "b" , "c"  )
+listeFromTuple2 = list(tuple2)
+print("listeFromTuple2",listeFromTuple2,type(listeFromTuple2))

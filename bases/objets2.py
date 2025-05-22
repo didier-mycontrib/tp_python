@@ -1,124 +1,146 @@
-from abc import ABC, abstractmethod
 
-########### code de la classe AnimalDomestique en python :
-#NB: ABC signifie AbstractBaseClass
-class AnimalDomestique(ABC):
+
+########### code de la classe Figure en python :
+
+class Figure:
 
     #constructeur avec valeurs par défaut:
-    def __init__(self,nom=""):
-        self.nom=nom
+    def __init__(self,x=0,y=0,color="black"):
+        self.x=x
+        self.y=y
+        self.color=color
 	
 	#méthode spéciale __str__ (équivalent à .toString() de java)
-	#qui sera automatiquement appelée lors d'un print(animal):
+	#qui sera automatiquement appelée lors d'un print(cercle):
     def __str__(self):
-        return "AnimalDomestique(nom="+self.nom + ")"
+        return f"Figure(x={self.x} ,y={self.y} ,color={self.color})"
 		
-    def decrire(self):
-         print("AnimalDomestique de nom=",self.nom)
-
-    @abstractmethod
-    def parler(self):
-        pass
-
-#### classe Chat héritant de AnimalDomestique:
-
-class Chat(AnimalDomestique):
-
-    #constructeur avec valeurs par défaut:
-    def __init__(self,nbHeuresSommeil=14,*args, **kwargs):
-        super().__init__(*args, **kwargs)
-        #AnimalDomestique.__init__(self,*args, **kwargs)
-        self.nbHeuresSommeil=nbHeuresSommeil
-	
-	#méthode spéciale __str__ (équivalent à .toString() de java)
-	#qui sera automatiquement appelée lors d'un print(chat):
-    def __str__(self):
-        return "Chat(nom=" + self.nom + " nbHeuresSommeil=" + str(self.nbHeuresSommeil) +  ")"
-
-    def decrire(self):
-        print("Je suis un chat qui dort ",self.nbHeuresSommeil, " h")
-        super().decrire()
-        #AnimalDomestique.decrire(self)
-    	
-    def parler(self):
-        print("miaou miaou")
+    def perimetre(self):
+        return 0
+		
+    def aire(self):
+        return 0
         
-    def ronronner(self):
-        print("ronron ...")        
-     
-#### classe Chien héritant de AnimalDomestique:
+    def deplacer(self,dx,dy):
+        self.x=self.x+dx
+        self.y=self.y+dy
+        
+    def afficher(self):
+        print(f"Figure(x={self.x} ,y={self.y} ,color={self.color})")
 
-class Chien(AnimalDomestique):
+########### code de la classe Cercle héritant de Figure :
+import math
+class Cercle(Figure):
 
     #constructeur avec valeurs par défaut:
-    def __init__(self,fonction="?",*args, **kwargs):
-        super().__init__(*args, **kwargs)
-        #AnimalDomestique.__init__(self,*args, **kwargs)
-        self.fonction=fonction
+    def __init__(self,xc=0,yc=0,rayon=0,color="black"):
+        #self.x=xc;self.y=yc;self.color=color #not advised
+        #Figure.__init__(self,xc,yc,color) #ok python 2 et 3
+        super().__init__(xc,yc,color) #ok python 3
+        self.rayon=rayon
 	
 	#méthode spéciale __str__ (équivalent à .toString() de java)
-	#qui sera automatiquement appelée lors d'un print(chat):
+	#qui sera automatiquement appelée lors d'un print(cercle):
     def __str__(self):
-        return "chien(nom=" + self.nom + " fonction=" + self.fonction +  ")"
-
-    def decrire(self):
-        print("Je suis un chien , fonction= ",self.fonction)
-        super().decrire()
-        #AnimalDomestique.decrire(self)
+        return f"Cercle xc={self.x} ,yc={self.y} ,rayon={self.rayon} ,color={self.color})"
 		
-    def parler(self):
-        print("whaouf whaouf")
-        
-    def monterLaGarde(self):
-        print("je monte la garde ...")        
-      
+    def perimetre(self):
+        return 2*math.pi*self.rayon
+		
+    def aire(self):
+        return math.pi*self.rayon*self.rayon
+    
+    def afficher(self):
+        print(f"Cercle(rayon={self.rayon})", end =" heritant de ")
+        super().afficher()
+                
+
+########### code de la classe Rectangle héritant de Figure :
+
+class Rectangle(Figure):
+
+    #constructeur avec valeurs par défaut:
+    def __init__(self,x=0,y=0,largeur=0,hauteur=0,color="black"):
+        #self.x=x; self.y=y; self.color=color #not advised
+        #Figure.__init__(self,x,y,color) # python 2 ou 3
+        super().__init__(x,y,color) # python 3
+        self.largeur=largeur
+        self.hauteur=hauteur
+	
+	#méthode spéciale __str__ (équivalent à .toString() de java)
+	#qui sera automatiquement appelée lors d'un print(rectangle):
+    def __str__(self):
+        return f"Rectangle (x={self.x} ,y={self.y} ,largeur={self.largeur} ,hauteur={self.hauteur} ,color={self.color} )"
+		
+    def perimetre(self):
+        return 2*(self.largeur + self.hauteur)
+		
+    def aire(self):
+        return self.largeur*self.hauteur
+              
+    def afficher(self):
+        print(f"Rectangle(largeur={self.largeur} ,hauteur={self.hauteur})" , end =" heritant de ")
+        super().afficher()
+
      
-###### utilisation de la classe AnimalDomestique 
-###### et de ses sous classes		
+        
+###### utilisation des classes Figure , Cercle et Rectangle		
 		
+f1=Figure()
+f2=Figure(50,50,"red"); f2.deplacer(10,10)
+print("f1=",f1)  
+print("f2=",f2)
+f2.afficher()        
 		
-'''
-#partie impossible depuis que la classe AnimalDomestique est abstraite
-a=AnimalDomestique() #impossible d'instancier une classe abstraite
-a.nom="animal_domestique_inconnu"
-a.decrire()
-a.parler()
-print("a_as_dict:" , vars(a))
-'''
+c1=Cercle() #instanciation (pas de mot clef new) mais nom de classeq
+             #vue comme fonction créant une nouvelle instance
+c1.rayon=40
+print("c1=",c1)  
+print("rayon de c1=",c1.rayon) # rayon de c1= 40
+print("perimetre de c1=",c1.perimetre()) # perimetre de c1= 251.32741228718345
+print("surface de c1=",c1.aire()) # surface de c1= 5026.548245743669
 
-chat1 = Chat( 15 , "malo")
-print(chat1)
-chat1.decrire()
-chat1.parler()
-chat1.ronronner()
-print("chat1_as_dict:" , vars(chat1))
+c2=Cercle(40,60,20) # Cercle(xc,yc,rayon)
+print("rayon de c2=",c2.rayon) # rayon de c2= 20
 
-chien1 = Chien( "gardien de troupeau" , "medor")
-print(chien1)
-chien1.decrire()
-chien1.parler()
-chien1.monterLaGarde()
-print("chien1_as_dict:" , vars(chien1))
+print("c2=" , c2) # équivalent à print("c2=" , str(c2)) 
+c2.afficher()
+# affiche c2= Cercle(xc=40,yc=60,rayon=20)
+
+c2.deplacer(10,30)
+print("apres c2.deplacer(10,30) c2=" , c2)
+print("c2=",c2) 
+
+print("type(c2)=",type(c2)) # <class '__main__.Cercle'>
+#c2AsDict = c2.__dict__ # ok mais moins bien que vars(...)
+c2AsDict = vars(c2) # converti un objet en un dictionnaire
+print("c2AsDict=",c2AsDict) # {'xc': 40, 'yc': 60, 'rayon': 20}
+print("type(c2AsDict)=",type(c2AsDict)) #  <class 'dict'>
+
+r1=Rectangle(15,15,200,150)
+print("largeur de r1=",r1.largeur)
+print("r1=",r1)
+r1.deplacer(10,30)
+print("apres r1.deplacer(10,30) r1=" , r1)
+r1.afficher()
+print("perimetre de r1=",r1.perimetre())
+print("surface de r1=",r1.aire()) 
+
+print("issubclass(Cercle,Figure):" ,  issubclass(Cercle,Figure))
+print("issubclass(Cercle,Rectangle):" ,  issubclass(Cercle,Rectangle))
 
 #polymorphisme en boucle :
-listeAnimaux = []
-listeAnimaux.append(chat1);
-listeAnimaux.append(chien1);
-for a in listeAnimaux:
-    print("\n pour a de type=", type(a))
-    a.decrire()
-    a.parler()
-    '''
-    #mais surtout pas :
-    if isinstance(a,Chat):
-        a.decrire_chat();
-        a.miauler()
-    else:
-        a.decrire_chien();
-        a.aboyer()
-    '''
-    
-print("\n")
-print("isinstance(chat1,Chat):" ,  isinstance(chat1,Chat))
-print("isinstance(a,Chat):" ,  isinstance(a,Chat))
-print("issubclass(Chat,AnimalDomestique):" ,  issubclass(Chat,AnimalDomestique))
+listeFigures = []
+listeFigures.append(c1)
+listeFigures.append(Cercle(100,150,50,"red"))
+listeFigures.append(r1)
+listeFigures.append(Rectangle(200,200,60,70,"orange"))
+for f in listeFigures:
+    f.deplacer(3,2)
+    print("\nPour f de type=", type(f))
+    f.afficher()
+    print("isinstance(f,Cercle):" ,  isinstance(f,Cercle))
+    print("isinstance(f,Rectangle):" ,  isinstance(f,Rectangle))
+    print("isinstance(f,Figure):" ,  isinstance(f,Figure))
+    print("------------------------------")
+
