@@ -7,7 +7,7 @@ import math;
 #NB: sqrt() calcule la racine carree (square root).
 
 #resolution ax^2+bx+c=0
-def resolEq2ndDegre(a,b,c):
+def resol_eq_2nd_degre(a,b,c):
 	delta = b*b-4*a*c
 	if delta==0 :
 		x1=x2=-b/(2*a)
@@ -21,13 +21,13 @@ def resolEq2ndDegre(a,b,c):
 	print("x1=",x1)
 	print("x2=",x2)
 		
-resolEq2ndDegre(2,-9,-5); # x1=-0.5 et x2=5
+resol_eq_2nd_degre(2,-9,-5); # x1=-0.5 et x2=5
 
-resolEq2ndDegre(2,-1,-6); # x1=-1.5 et x2=2
+resol_eq_2nd_degre(2,-1,-6); # x1=-1.5 et x2=2
 
-resolEq2ndDegre(1,3,9/8); # x1=x2=4/4=0.75
+resol_eq_2nd_degre(1,3,9/8); # x1=x2=4/4=0.75
 
-resolEq2ndDegre(1,2,5); # x1=-1-2j et -1+2j avec j=i et j^2=i^2=-1
+resol_eq_2nd_degre(1,2,5); # x1=-1-2j et -1+2j avec j=i et j^2=i^2=-1
 
 ###############################"
 
@@ -56,5 +56,5 @@ c=random.choice( small_letters) # retourne un éléments de la séquence
                                 # choisi aléatoirement : ici une lettre en a et z
 print(c) # affiche c ou r ou autre
 
-subList = random.sample([1, 2, 3, 4, 5],  3)  # Choose 3 elements
-print(subList) # affiche [5, 2, 1] ou autre
+sub_list = random.sample([1, 2, 3, 4, 5],  3)  # Choose 3 elements
+print(sub_list) # affiche [5, 2, 1] ou autre

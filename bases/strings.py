@@ -8,38 +8,38 @@ france'''
 print(s4) # affiche une chaine multi-lignes
 
 s5="Bonjour"
-premierCaractere=s5[0]
-print(premierCaractere) # B
+premier_caractere=s5[0]
+print(premier_caractere) # B
 
-dernierCaractere=s5[-1]
-print(dernierCaractere) # r
+dernier_caractere=s5[-1]
+print(dernier_caractere) # r
 
 # [i,j] means .substring(i,j) included i and excluding j
 
-troisPremiersCaracteres=s5[0:3]# s5[0:3] means s5[0:3[ !!!
-print(troisPremiersCaracteres) # Bon
+trois_premiers_caracteres=s5[0:3]# s5[0:3] means s5[0:3[ !!!
+print(trois_premiers_caracteres) # Bon
 
 n=len(s5) # length of string (7)
 
-troisDerniersCaracteres=s5[n-3:n]# s5[n-3:n] means s5[n-3:n[ !!!
-print(troisDerniersCaracteres) # our
+trois_derniers_caracteres=s5[n-3:n]# s5[n-3:n] means s5[n-3:n[ !!!
+print(trois_derniers_caracteres) # our
 
 s6=" Ile De France "
-s6Bis=s6.strip() #like trim of other language --> supprime espaces inutiles
+s6__bis=s6.strip() #like trim of other language --> supprime espaces inutiles
                  #au début ou à la fin
-print(s6Bis) # "Ile De France"
+print(s6__bis) # "Ile De France"
 
 s7="Mont Saint Michel"
-s7Maj = s7.upper(); print(s7Maj) # MONT SAINT MICHEL 
-s7Min = s7.lower(); print(s7Min) # mont saint michel
+s7_maj = s7.upper(); print(s7_maj) # MONT SAINT MICHEL 
+s7_min = s7.lower(); print(s7_min) # mont saint michel
 
 s7="Mont Saint Michel"
-s7Bis=s7.replace(' ','-'); # replace substring with another string
-print(s7Bis) # Mont-Saint-Michel
+s7_bis=s7.replace(' ','-'); # replace substring with another string
+print(s7_bis) # Mont-Saint-Michel
 
 s8="partie1;partie2;partie3"
-listeParties=s8.split(';')
-print(listeParties) # ['partie1', 'partie2', 'partie3']
+liste_parties=s8.split(';')
+print(liste_parties) # ['partie1', 'partie2', 'partie3']
 
 s9="un deux trois"
 if "deux" in s9 :
@@ -65,18 +65,18 @@ s11="surLigne1\nsurLigne2" ; print(s11);
 # surLigne2
 
 s12="dupond";
-s12Bis=s12.capitalize() # transforme première lettre en Majuscule
-print(s12Bis); # Dupond
+s12_bis=s12.capitalize() # transforme première lettre en _majuscule
+print(s12_bis); # Dupond
 
-fileName="p2.py"
-dotIndex = fileName.find(".") 
+file_name="p2.py"
+dot_index = file_name.find(".") 
 # .index() retourne position de la chaine recherchée et erreur si pas trouvée
 # .find() retourne position de la chaine recherchée et -1 si pas trouvée
-print("position . =" , dotIndex) # 2
+print("position . =" , dot_index) # 2
 
 s13="phrase finissant par un point."
 if s13.endswith(".") :
-	print("s13 se termine par '.' ")
+	print("s13 se ter_mine par '.' ")
 	
 s14="123"
 if s14.isdigit() :

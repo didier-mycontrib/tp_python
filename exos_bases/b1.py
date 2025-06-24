@@ -11,7 +11,7 @@ print("valeur impaires=",impairs)
 
 noms = [ "jean" , "Luc" , "eric" , "Julie" ]
 for nom in noms :
-    nomMaj = nom.upper()
-    if nom[0] != nomMaj[0] :
+    nom_maj = nom.upper()
+    if nom[0] != nom_maj[0] :
         noms.remove(nom)
 print("noms=",noms)     

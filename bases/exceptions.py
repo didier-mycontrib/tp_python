@@ -1,4 +1,4 @@
-def myDivision(x,y):
+def my_division(x,y):
 	if y==0 :
 		raise Exception("division par zéro invalide")
 	else :
@@ -9,8 +9,8 @@ a=6
 b=0
 
 try :
-	c=myDivision(a,b);
-	print("res myDivision=" , c)
+	c=my_division(a,b);
+	print("res my_division=" , c)
 except Exception as e :
     print("une erreur a eu lieu :" , e)
 

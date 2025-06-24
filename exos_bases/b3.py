@@ -1,16 +1,16 @@
 liste = [ "rouge" , "vert" , "bleu" , "rouge" , "vert"]
-colorSet = set(liste)
-print("colorSet=",colorSet , " type = " , type(colorSet));
+color_set = set(liste)
+print("color_set=",color_set , " type = " , type(color_set))
 
-colorSet2 = { "jaune" , "vert" , "orange"}
-allColorSet = colorSet.union(colorSet2)
-print("allColorSet=",allColorSet)
+color_set2 = { "jaune" , "vert" , "orange"}
+allcolor_set = color_set.union(color_set2)
+print("allcolor_set=",allcolor_set)
 
-jourSet = { "erreur", "lundi" , "mardi" , "mercredi" , "jeudi"}
-jourSet.discard("erreur")
-jourSet.add("vendredi")
-print("jourSet=",jourSet)
-jourSet.update({"samedi" , "dimanche"})
-print("jourSet=",jourSet)
-jourSet.clear()
-print("jourSet=",jourSet)
+jour_set = { "erreur", "lundi" , "mardi" , "mercredi" , "jeudi"}
+jour_set.discard("erreur")
+jour_set.add("vendredi")
+print("jour_set=",jour_set)
+jour_set.update({"samedi" , "dimanche"})
+print("jour_set=",jour_set)
+jour_set.clear()
+print("jour_set=",jour_set)

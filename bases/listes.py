@@ -1,8 +1,8 @@
-listeVide=[]
+liste_vide=[]
 
-listeInitiale=[1,2,3]
+liste_initiale=[1,2,3]
 
-liste=listeInitiale
+liste=liste_initiale
 liste.append(4)
 print("liste=",liste) # affiche [1,2,3,4]
 print("liste=",liste)
@@ -26,23 +26,23 @@ liste4=[1,2,3,4];
 liste4.reverse() # inverse l'ordre des éléments de la liste
 print("liste4=",liste4) # affiche [ 4,3,2,1 ]
 
-nbElements=len(liste4)
-print("longueur (nbElements) de liste4=",nbElements) # affiche 4
+nb_elements=len(liste4)
+print("longueur (nbElements) de liste4=",nb_elements) # affiche 4
 
 liste5=['a' , 'b' , 'a' , 'b' , 'c' , 'a' ]
-nbOccurencesDeA = liste5.count('a')
-print("nbOccurences de 'a' dans liste5=",nbOccurencesDeA) # affiche 3
+nb_occurences_a = liste5.count('a')
+print("nb occurences de 'a' dans liste5=",nb_occurences_a) # affiche 3
 
-indiceBdansListe5= liste5.index('b') 
-print("indiceBdansListe5",indiceBdansListe5) # 1 (premier trouvé)
+indice_b_dans_liste5= liste5.index('b') 
+print("indice_b_dans_liste5",indice_b_dans_liste5) # 1 (premier trouvé)
 
-indiceCdansListe5= liste5.index('c')
-print("indiceCdansListe5",indiceCdansListe5) # 4 
+indice_c_dans_liste5= liste5.index('c')
+print("indice_c_dans_liste5",indice_c_dans_liste5) # 4 
 
-autreListe = [ 'a' , 'b' , 'c1', 'd' , 'e']
-autreListe.insert(3,'c2') #insertion avant l'élément actuel d'indice 3
+autre_liste = [ 'a' , 'b' , 'c1', 'd' , 'e']
+autre_liste.insert(3,'c2') #insertion avant l'élément actuel d'indice 3
                           #insertion du nouvel élément en pos 3 et en décalant la fin
-print('autreListe apres insertion:' , autreListe)
+print('autre_liste apres insertion:' , autre_liste)
 
 #liste5.index('e') --> ValueError: 'e' is not in list
 
@@ -83,17 +83,17 @@ liste8[0]=1.1
 print("liste7=",liste7) # affiche [1, 3 , 5]
 print("liste8=",liste8) # affiche [1.1, 3 , 5 ]
 
-maPile = [ 1 , 2 ,  3 , 4]
-dernierElementRetire  = maPile.pop(); print(dernierElementRetire); # 4
-dernierElementRetire  = maPile.pop(); print(dernierElementRetire); # 3
-print(maPile); # [ 1, 2 ]
+ma_pile = [ 1 , 2 ,  3 , 4]
+dernier_element_retire  = ma_pile.pop(); print(dernier_element_retire); # 4
+dernier_element_retire  = ma_pile.pop(); print(dernier_element_retire); # 3
+print(ma_pile); # [ 1, 2 ]
 
-troisCouleurs="rouge;vert;bleu" # grande chaîne de caractères avec sous parties séparées par ";"
-listeCouleurs = troisCouleurs.split(";")
-print("listeCouleurs=",listeCouleurs) # ['rouge', 'vert', 'bleu']
+trois_couleurs="rouge;vert;bleu" # grande chaîne de caractères avec sous parties séparées par ";"
+liste_couleurs = trois_couleurs.split(";")
+print("liste_couleurs=",liste_couleurs) # ['rouge', 'vert', 'bleu']
 
-mesCouleurs=";".join(listeCouleurs) # transforme liste en chaîne de caractères
-print("mesCouleurs=",mesCouleurs) # affiche la chaîne rouge;vert;bleu
+mes_couleurs=";".join(liste_couleurs) # transforme liste en chaîne de caractères
+print("mes_couleurs=",mes_couleurs) # affiche la chaîne rouge;vert;bleu
 
 
 liste10=[ 'a' , 'b' , 'c' ]
@@ -109,15 +109,15 @@ else :
 
 
 '''
-listeDeCouleurs =           [ 'rouge' , 'vert' , 'bleu' , 'noir' , 'blanc' ]
+liste_couleurs =           [ 'rouge' , 'vert' , 'bleu' , 'noir' , 'blanc' ]
 # indices ou positions :      0            1        2        3        4
-print('la taille de liste de couleurs est ' , len(listeDeCouleurs) ) # affiche 5
-print('la première couleur est ' , listeDeCouleurs[0] ) # affiche rouge
-print('la couleurs du milieu est ' , listeDeCouleurs[2] ) # affiche bleu
-print('la dernière couleur est ' , listeDeCouleurs[4] ) # affiche blanc
-print('en dernier ' , listeDeCouleurs[ len(listeDeCouleurs)-1 ] ) #  blanc
+print('la taille de liste de _couleurs est ' , len(liste_couleurs) ) # affiche 5
+print('la première couleur est ' , liste_couleurs[0] ) # affiche rouge
+print('la _couleurs du milieu est ' , liste_couleurs[2] ) # affiche bleu
+print('la dernière couleur est ' , liste_couleurs[4] ) # affiche blanc
+print('en dernier ' , liste_couleurs[ len(liste_couleurs)-1 ] ) #  blanc
 
-print('plage 1 inclus à 3 exclus :' , listeDeCouleurs[1:3]) # ['vert', 'bleu']
-print('plage début à 3 exclus :',listeDeCouleurs[:3]) # ['rouge', 'vert', 'bleu']
-print('plage 2 inclus à fin  :',listeDeCouleurs[2:]) # ['bleu', 'noir', 'blanc']
+print('plage 1 inclus à 3 exclus :' , liste_couleurs[1:3]) # ['vert', 'bleu']
+print('plage début à 3 exclus :',liste_couleurs[:3]) # ['rouge', 'vert', 'bleu']
+print('plage 2 inclus à fin  :',liste_couleurs[2:]) # ['bleu', 'noir', 'blanc']
 '''

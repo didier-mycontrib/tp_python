@@ -1,7 +1,7 @@
 phrase = input("phrase=")
 print("phrase="+phrase)
 mot=phrase.replace(' ',''); #supprimer tout les espaces:
-print("motPhrase (sans espace)="+mot)
+print("mot phrase (sans espace)="+mot)
 l = len(mot)
 difference=False
 for i in range(0,l//2+1):

@@ -39,12 +39,12 @@ if (age<18) or (age>=65) :
 	print('enfant ou bien personne agée')
 print('suite dans tous les cas')
 
-listeDeCouleurs = [ 'rouge' , 'vert' , 'bleu' , 'noir' , 'blanc' ]
-print('la taille de liste de couleurs est ' , len(listeDeCouleurs) )
-print('la première couleur est ' , listeDeCouleurs[0] ) # affiche rouge
-print('la couleurs du milieu est ' , listeDeCouleurs[2] )# affiche bleu
-print('la dernière couleur est ' , listeDeCouleurs[4] )# affiche blanc
-print('en dernier ' , listeDeCouleurs[len(listeDeCouleurs)-1] )#  blanc
+liste_couleurs = [ 'rouge' , 'vert' , 'bleu' , 'noir' , 'blanc' ]
+print('la taille de liste de couleurs est ' , len(liste_couleurs) )
+print('la première couleur est ' , liste_couleurs[0] ) # affiche rouge
+print('la couleurs du milieu est ' , liste_couleurs[2] )# affiche bleu
+print('la dernière couleur est ' , liste_couleurs[4] )# affiche blanc
+print('en dernier ' , liste_couleurs[len(liste_couleurs)-1] )#  blanc
 
 seq=1,2,3
 print('sequence 1, 2 , 3',seq, type(seq)) # s'affiche comme (1 , 2 , 3)
@@ -54,8 +54,8 @@ print('range(3,6)=de 3 à 5<6 = ',list(range(3,6))) # affiche [ 3, 4 , 5 ]
 print('range(4-1,0-1,-1)= séquence inversée = ',list(range(3,-1,-1))) # affiche [ 3, 2 , 1 , 0 ]
 
 #indicesDe0a3= 0,1,2,3
-indicesDe0a3= range(4) # range(4) construit 0, 1, 2, 3
-for i in indicesDe0a3 :
+indices_0a3= range(4) # range(4) construit 0, 1, 2, 3
+for i in indices_0a3 :
 	print("i=",i)
 print('suite apres la boucle')
 
@@ -64,16 +64,16 @@ for i in range(2,9,2) :
 	print("i=",i)
 print('suite apres la boucle')
 
-joursDeLaSemaine = ['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche']
-# la liste (ou tableau) joursDeLaSemaine comporte 7 éléments dont les positions/indices vont de 0 à 6
-for jour in joursDeLaSemaine :
-	print(jour,'est un element de joursDeLaSemaine')
+jours_semaine = ['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche']
+# la liste (ou tableau) jours_semaine comporte 7 éléments dont les positions/indices vont de 0 à 6
+for jour in jours_semaine :
+	print(jour,'est un element de jours_semaine')
 print('suite apres la boucle')
 
-#nbJoursDansUneSemaine=7
-nbJoursDansUneSemaine=len(joursDeLaSemaine) # la fonction len() retourne la taille/longueur (length en englais)
-for i in range(nbJoursDansUneSemaine) :
-	print("i=",i,"jour=",joursDeLaSemaine[i])
+#nb_jours_dans_semaine=7
+nb_jours_dans_semaine=len(jours_semaine) # la fonction len() retourne la taille/longueur (length en englais)
+for i in range(nb_jours_dans_semaine) :
+	print("i=",i,"jour=",jours_semaine[i])
 print('suite apres la boucle')
 
 liste =[ 10 , 40 , 30 , 50 , 20 ]
@@ -143,12 +143,12 @@ else:
 	print("--- fin de liste ----")
 
 valeurs=[-1, -8, 6 , -9 , 12,-3, 4]
-premierPositif=None ; print("type de None=",type(premierPositif))
+premier_positif=None ; print("type de None=",type(premier_positif))
 for v in valeurs:
 	if v >=0 :
-		premierPositif=v
+		premier_positif=v
 		break # fin anticipée de boucle (premierPositif déjà trouvé)
-print("premierPositif=",premierPositif) # 6
+print("premier_positif=",premier_positif) # 6
 
 for v in valeurs:
 	if v <0 :

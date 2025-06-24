@@ -1,12 +1,12 @@
-nbEssais=0
-aDeviner=33
+nb_essais=0
+a_deviner=33
 x=None
-while x!=aDeviner :
+while x!=a_deviner :
     x=int(input("x="))
-    nbEssais+=1
-    if x > aDeviner :
+    nb_essais+=1
+    if x > a_deviner :
         print("trop grand")
-    elif x < aDeviner :
+    elif x < a_deviner :
         print("trop petit")
     else:
-        print("vous avez trouvé " + str(aDeviner) + " en " + str(nbEssais) + " essais")
+        print("vous avez trouvé " + str(a_deviner) + " en " + str(nb_essais) + " essais")

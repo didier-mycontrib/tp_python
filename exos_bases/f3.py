@@ -1,0 +1,1 @@
+print("Quelques essais libres de syntaxes avancées au sein de f3.py")

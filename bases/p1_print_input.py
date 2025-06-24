@@ -9,8 +9,8 @@ print("b=",b,"c=",c) # affiche plusieurs choses en les séparant par des espaces
 # affiche ici b= 10 c= 12
 prenom = "alex" # une chaine de caractères est délimitée en python par des " " ou des ' '
 nom = 'Therieur'
-nomComplet = prenom + ' ' + nom # concaténation (ajout bout à bout)
-print(nomComplet) # affiche alex Therieur
+nom_complet = prenom + ' ' + nom # concaténation (ajout bout à bout)
+print(nom_complet) # affiche alex Therieur
 # input('texte question') demande à saisir/renseigner une valeur
 age = input ("quel est ton age ? ")
 print ('age renseigné:' , age); # affichera la valeur choisie/précisée .

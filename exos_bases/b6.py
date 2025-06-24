@@ -1,4 +1,4 @@
-listePays=[
+liste_pays=[
     { 'nom':'France'    , 'capitale' : 'Paris'  , 'population': 66352469  },
     { 'nom':'Allemagne' , 'capitale' : 'Berlin' , 'population': 81174000  },
     { 'nom':'Espagne'   , 'capitale' : 'Madrid' , 'population': 46439864  },
@@ -6,8 +6,8 @@ listePays=[
     { 'nom':'Royaume-Uni', 'capitale' :'Londres', 'population': 64767115  },
 ]
 #calculer et afficher la population totale:
-populationTotale=0
-for p in listePays:
-    populationTotale+=p['population']
+population_totale=0
+for p in liste_pays:
+    population_totale+=p['population']
 
-print('population totale=',populationTotale)    
+print('population totale=',population_totale)    

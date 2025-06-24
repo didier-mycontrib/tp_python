@@ -16,18 +16,18 @@ print("liste=",liste)
 liste_triee = sorted(liste) 
 print("liste_triee=",liste_triee)
 
-listePers = [
+liste_pers = [
     { 'nom' : 'Dupond' , 'age' : 23 },
     { 'nom' : 'Zorro' , 'age' : 44 },
     { 'nom' : 'Anatole' , 'age' : 66 },
     { 'nom' : 'Laurent' , 'age' : 25 }
 ]
 
-print("listePers=",listePers)
-listePers_triee_par_noms = sorted(listePers, key = lambda p : p['nom']) 
-print("listePers_triee_par_noms=",listePers_triee_par_noms)
-listePers_triee_par_ages = sorted(listePers, key = lambda p : p['age']) 
-print("listePers_triee_par_ages=",listePers_triee_par_ages)
+print("liste_pers=",liste_pers)
+liste_pers_triee_par_noms = sorted(liste_pers, key = lambda p : p['nom']) 
+print("liste_pers_triee_par_noms=",liste_pers_triee_par_noms)
+liste_pers_triee_par_ages = sorted(liste_pers, key = lambda p : p['age']) 
+print("liste_pers_triee_par_ages=",liste_pers_triee_par_ages)
 
 ##### filtrages et transformations (avec lambdas)
 

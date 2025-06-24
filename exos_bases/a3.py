@@ -1,6 +1,6 @@
 largeur=5
-longeur=10
-perimetre=2*(largeur+longeur) 
+longueur=10
+perimetre=2*(largeur+longueur) 
 print("perimetre=",perimetre)
-surface=largeur*longeur 
+surface=largeur*longueur 
 print("surface=",surface)

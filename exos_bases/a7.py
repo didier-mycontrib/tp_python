@@ -1,5 +1,5 @@
 for l in range(8):
-    ligneEtoiles=""
+    ligne_etoiles=""
     for c in range(l+1):
-        ligneEtoiles+="*"
-    print(ligneEtoiles)
+        ligne_etoiles+="*"
+    print(ligne_etoiles)

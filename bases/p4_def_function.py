@@ -1,14 +1,14 @@
 #p4.py : fonctions
 
 #fonction basique sans paramètre retournant une valeur fixe:
-def genererMessageSalutation():
+def generer_message_salutation():
 	message="bonjour"
 	return message
 	
 #fonction/procedure basique ne retournant aucune valeur
 #mais exécutant une action:	
 def saluer():
-	salutation=genererMessageSalutation() #appel de sous-fonction
+	salutation=generer_message_salutation() #appel de sous-fonction
 	print(salutation)	
 	
 saluer() #l'appel de la fonction déclenche l'affichage de bonjour
@@ -33,72 +33,72 @@ def carre(x):
 
 print("carre(4)=", carre(4)) #16
 
-lambdaCarre = lambda x : x*x
-print("type(lambdaCarre)=", type(lambdaCarre)) #<class 'function'>
-print("lambdaCarre(4)=", lambdaCarre(4)) #16
+lambda_carre = lambda x : x*x
+print("type(lambda_carre)=", type(lambda_carre)) #<class 'function'>
+print("lambda_carre(4)=", lambda_carre(4)) #16
 
-lambdaMult = lambda x,y : x*y
-print("lambdaMult(2,3)=", lambdaMult(2,3)) #6
+lambda_mult = lambda x,y : x*y
+print("lambda_mult(2,3)=", lambda_mult(2,3)) #6
 
 import datetime;
-lambdaReturnNow = lambda  maintenant=datetime.datetime.now() :maintenant.time()
-print("heure=" , lambdaReturnNow()) # 18:16:54.789809
+lambda_return_now = lambda  maintenant=datetime.datetime.now() :maintenant.time()
+print("heure=" , lambda_return_now()) # 18:16:54.789809
 
-def enchainerCalculEtAffichageAvecPrefixage(x, fCalcul ,fPrefixage):
-	res = fCalcul(x)
-	print(fPrefixage(res))
+def enchainer_calcul_et_affichage_avec_prefixage(x, f_calcul ,f_prefixage):
+	res = f_calcul(x)
+	print(f_prefixage(res))
 
-enchainerCalculEtAffichageAvecPrefixage(6 , 
+enchainer_calcul_et_affichage_avec_prefixage(6 , 
 		lambda x:x*x ,lambda expr : '** ' + str(expr))	# ** 36	
 
-enchainerCalculEtAffichageAvecPrefixage(6 , 
+enchainer_calcul_et_affichage_avec_prefixage(6 , 
 		lambda x:x+x ,lambda expr : '>> ' + str(expr)) # >> 12	
 
 
 ############## paramétres optionnels et nommés
 
-def displayVal(val , color="blue" ,comment ="no comment"):
+def display_val(val , color="blue" ,comment ="no comment"):
 	message=str(val)+ " color="+color + " comment="+comment
 	print(message)
 
-displayVal(5,"red","with_all_params")
+display_val(5,"red","with_all_params")
 #5 color=red comment=with_all_params
 
-displayVal(8,"green")#with default comment	
+display_val(8,"green")#with default comment	
 #8 color=green comment=no comment
 
-displayVal(7) # with default color and comment
+display_val(7) # with default color and comment
 #7 color=blue comment=no comment
 
-displayVal(comment="with_named_params",val=9)	#with named params
+display_val(comment="with_named_params",val=9)	#with named params
 #9 color=blue comment=with_named_params
 
 
 ####### fonction à nombre d'arguments variables (*args, **kwargs)
 # **kwargs for keyword args or **kvargs for keyValue args
 
-def displayArgs(*args):
+def display_args(*args):
 	for a in args:
 		print("a=",a)
 
-def displayKeyValueArgs(**kvargs):
+def display_keyword_args(**kvargs):
 	for k,v in kvargs.items():
 		print("k=",k,"v=",v)
 
-def displayArgsAndKeywordArgs(*args,**kwargs):
+def display_args_and_keyword_args(*args,**kwargs):
 	for a in args:
 		print("a=",a)
 	for k,v in kwargs.items():
 		print("k=",k,"v=",v)				
 
 
-def sommeArgs(*args):
+def somme_args(*args):
 	s=0
 	for a in args:
 		s+=a
 	return s
 
-def sommeAnyArgs(*args,**kwargs):
+def somme_any_args(*args,**kwargs):
 	s=0
 	for a in args:
 		s+=a
@@ -106,11 +106,11 @@ def sommeAnyArgs(*args,**kwargs):
 		s+=v
 	return s
 
-displayArgs(2,6,8) # a=  , a= 6 , a= 8
-print("sommeArgs=",sommeArgs(2,6,8)) # 16
+display_args(2,6,8) # a= 2 , a= 6 , a= 8
+print("sommeArgs=",somme_args(2,6,8)) # 16
 
-displayKeyValueArgs(a=1,b=3,c=5)#k= a v= 1 , k= b v= 3 , k= c v= 5
-displayArgsAndKeywordArgs(2,6,8,a=1,b=3,c=5) #ok
-#displayArgsAndKeywordArgs(a=1,b=3,c=5,2,6,8) #error , positional args should be first
+display_keyword_args(a=1,b=3,c=5)#k= a v= 1 , k= b v= 3 , k= c v= 5
+display_args_and_keyword_args(2,6,8,a=1,b=3,c=5) #ok
+#display_args_and_keyword_args(a=1,b=3,c=5,2,6,8) #error , positional args should be first
 
-print("sommeAnyArgs=",sommeAnyArgs(2,6,8,a=1,b=3,c=5)) # 25
+print("sommeAnyArgs=",somme_any_args(2,6,8,a=1,b=3,c=5)) # 25

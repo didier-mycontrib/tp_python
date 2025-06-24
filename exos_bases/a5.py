@@ -12,9 +12,9 @@ for v in tab :
 for i in range(len(tab)-1,-1,-1):
     print("tab["+str(i)+"]=",tab[i])
 
-premierImpair = None
+premier_impair = None
 for v in tab :
     if v % 2 !=0 :
-        premierImpair=v
+        premier_impair=v
         break
-print("premier impair=",premierImpair)
+print("premier impair=",premier_impair)

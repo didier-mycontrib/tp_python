@@ -4,21 +4,21 @@ while x <= 5 :
 	x=x+1
 print('suite apres la boucle')
 
-listeCouleurs = [ "rouge" , "noir" ]
-listeCouleurs.append("vert") # ajoute l'élément "vert" à la liste
-listeCouleurs.append("bleu") # ajoute l'élément "bleu" à la liste
-print("listeCouleurs=",listeCouleurs); # ['rouge', 'noir', 'vert', 'bleu']
+liste_couleurs = [ "rouge" , "noir" ]
+liste_couleurs.append("vert") # ajoute l'élément "vert" à la liste
+liste_couleurs.append("bleu") # ajoute l'élément "bleu" à la liste
+print("liste_couleurs=",liste_couleurs); # ['rouge', 'noir', 'vert', 'bleu']
 
 #NB: un paquet de ligne de code encadré par ''' et '''
 #    sont considérées comme 'en commentaire' et donc pas déclenchées/exécutées
 '''
-listeValeurs = []
-valeurOuFin=input("val=")
-while (valeurOuFin != 'fin' ) and (valeurOuFin != '' ):
-	nouvelleValeur = float(valeurOuFin)
-	listeValeurs.append(nouvelleValeur)
-	valeurOuFin=input("val=")
-print('listeValeurs=',listeValeurs)
+liste_valeurs = []
+valeur_ou_fin=input("val=")
+while (valeur_ou_fin != 'fin' ) and (valeur_ou_fin != '' ):
+	nouvelleValeur = float(valeur_ou_fin)
+	liste_valeurs.append(nouvelleValeur)
+	valeur_ou_fin=input("val=")
+print('liste_valeurs=',liste_valeurs)
 '''
 
 nom="toto"
