@@ -3,4 +3,4 @@ from h1_metadata import metadata_object
 
 # emitting DDL :
 metadata_object.create_all(my_db_sql_alchemy_engine)
-print(f"sqlite database {my_db_url} initialized")
+print(f"database {my_db_url} initialized")
